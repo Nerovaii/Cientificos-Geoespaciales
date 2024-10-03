@@ -1,34 +1,61 @@
-import React from 'react';
-import { MapContainer, TileLayer } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
+import React, { useState } from 'react';
+import LayerMenu from './Layer';
+import MapComponent from './Map';
 import '../styles/App.css';
-import { Globe2 } from 'lucide-react'
+import logo from '../assets/logo.png';
 
-const MapView = () => {
-    return (
-        <div className="app-container">
-      <header className="app-header">
-        <h1 className="app-title">
-          <Globe2 className="app-icon" />
+function App() {
+  const [visibleLayers, setVisibleLayers] = useState({});
+  const [layerData, setLayerData] = useState({}); // Estado para los datos de las capas subidas
+
+  const toggleLayer = (layerName) => {
+    setVisibleLayers(prev => ({
+      ...prev,
+      [layerName]: !prev[layerName]
+    }));
+  };
+
+  const addLayer = (layerName, data) => {
+    // Función para agregar la capa subida al estado de la aplicación
+    setLayerData(prev => ({
+      ...prev,
+      [layerName]: data
+    }));
+    setVisibleLayers(prev => ({
+      ...prev,
+      [layerName]: true // Hacer visible la capa por defecto
+    }));
+  };
+
+  return (
+    <div className="map-view">
+      <header>
+        <h1>
+          <img 
+            src={logo} 
+            alt="Logo" 
+            className="logo"
+          />        
           Cientificos Geoespaciales
         </h1>
       </header>
-      <main className="app-main">
-        <div className="map-container">
-          <MapContainer
-            center={[-35.759673, -71.621172]}
-            zoom={10}
-            className="leaflet-container"
-          >
-            <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      <main>
+        <div className="map-content">
+          <LayerMenu 
+            visibleLayers={visibleLayers} 
+            toggleLayer={toggleLayer} 
+            addLayer={addLayer}
+          />
+          <div className="map-wrapper">
+            <MapComponent 
+              visibleLayers={visibleLayers} 
+              layerData={layerData}
             />
-          </MapContainer>
+          </div>
         </div>
       </main>
     </div>
-    );
-};
+  );
+}
 
-export default MapView;
+export default App;

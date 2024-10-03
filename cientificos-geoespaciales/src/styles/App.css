@@ -1,50 +1,49 @@
-.app-container {
+.map-view {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+  background: linear-gradient(to bottom, #f3f4f6, #e5e7eb);
 }
 
-.app-header {
+.map-view header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
-.app-title {
-  font: bold;
+.map-view h1 {
   font-size: 1.875rem;
   font-weight: bold;
-  color: #333333;
+  color: #1f2937;
   display: flex;
   align-items: center;
 }
 
-.app-icon {
+.map-view h1 svg {
   margin-right: 0.5rem;
-  height: 2rem;
-  width: 2rem;
-  color: #3b82f6;
 }
 
-.app-main {
-  display: flex;
-  justify-content: end;
+.map-view main {
+  max-width: 1280px;
+  margin: 0 auto;
   padding: 1.5rem;
 }
 
-.map-container {
-  min-width: 1200px;
-  background-color: #ffffff;
-  border-radius: 1rem;
+.map-content {
+  display: flex;
+  background-color: white;
+  border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.leaflet-container {
-  height: 75vh;
-  width: 100%;
-  border: 1px solid #e5e5e5;
-  border-radius: 1rem;
+.map-wrapper {
+  flex-grow: 1;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
 }

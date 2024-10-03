@@ -1,41 +1,52 @@
-'use client'
+import React from 'react';
+import { MapContainer, TileLayer, LayersControl, GeoJSON } from 'react-leaflet';
+import L, { divIcon } from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import '../styles/Map.css';
 
-import React, { useState } from 'react'
-import { Globe2 } from 'lucide-react'
-import { LayerMenu } from './layer-menu'
-import { MapComponent } from './map-component'
-import './map-view.css'
+function Map({ layerData, visibleLayers }) { // Change geojsonData to layerData
 
-export default function MapView() {
-  const [visibleLayers, setVisibleLayers] = useState({
-    base: true,
-    layer1: false,
-    layer2: false,
-  })
-
-  const toggleLayer = (layerName: string) => {
-    setVisibleLayers(prev => ({
-      ...prev,
-      [layerName]: !prev[layerName]
-    }))
-  }
-
-  return (
-    <div className="map-view">
-      <header>
-        <h1>
-          <Globe2 />
-          Cientificos Geoespaciales
-        </h1>
-      </header>
-      <main>
-        <div className="map-content">
-          <LayerMenu visibleLayers={visibleLayers} toggleLayer={toggleLayer} />
-          <div className="map-wrapper">
-            <MapComponent visibleLayers={visibleLayers} />
-          </div>
-        </div>
-      </main>
-    </div>
-  )
+    const setColor = () => {
+      return { weight: 1 };
+    };
+  
+    const customMarkerIcon = (name) =>
+      divIcon({
+        html: name,
+        className: 'icon',
+      });
+  
+    const setIcon = (feature, latlng) => {
+      return L.marker(latlng, { icon: customMarkerIcon(feature.properties.Name) });
+    };
+  
+    return (
+      <MapContainer
+        center={[-35.759673, -71.621172]}
+        zoom={10}
+        className="map-container"
+      >
+        <LayersControl position="topright">
+          <LayersControl.BaseLayer checked name="OpenStreetMap">
+            <TileLayer
+              url="https://{s}.basemaps.cartocdn.com/rastertiles/dark_nolabels/{z}/{x}/{y}.png"
+              attribution="&copy; OpenStreetMap contributors"
+            />
+          </LayersControl.BaseLayer>
+          {Object.entries(visibleLayers).map(
+            ([layerName, isVisible]) =>
+              isVisible && layerData[layerName] ? ( // Use layerData here
+                <GeoJSON
+                  key={layerName}
+                  data={layerData[layerName]} // Use layerData here
+                  style={setColor}
+                  pointToLayer={setIcon}
+                />
+              ) : null
+          )}
+        </LayersControl>
+      </MapContainer>
+    );
 }
+
+export default Map;
