@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 .map-view {
+  font-family: "Open Sans", sans-serif;
   min-height: 100vh;
   background: linear-gradient(to bottom, #f3f4f6, #e5e7eb);
 }
@@ -25,15 +28,13 @@
 }
 
 .map-view main {
-  max-width: 1280px;
-  margin: 0 auto;
   padding: 1.5rem;
 }
 
 .map-content {
   display: flex;
   background-color: white;
-  border-radius: 0.5rem;
+  border-radius: 0.9rem;
   overflow: hidden;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
