@@ -1,0 +1,11 @@
+prefix=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library 
+exec_prefix=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library 
+libdir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib 
+includedir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/include 
+modules=0 
+Name: libXML 
+Version: 2.13.1 
+Description: libXML library version2. 
+Requires: 
+Libs: -LN:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib -lxml2 -liconv -lz 
+Cflags: -IN:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/include/libxml2 -IN:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/include 

@@ -1,0 +1,13 @@
+prefix=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library
+exec_prefix=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library
+libdir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib
+sharedlibdir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib
+includedir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

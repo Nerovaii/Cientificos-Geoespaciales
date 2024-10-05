@@ -1,0 +1,15 @@
+prefix=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library
+exec_prefix=${prefix}
+bindir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/bin
+libdir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib
+includedir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/include
+
+zipcmp=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/bin/zipcmp
+
+Name: libzip
+Description: library for handling zip archives
+Version: 1.8.0
+Libs:  -L${libdir} -lzip
+Libs.private:  -ladvapi32 -lbz2 -llzma -lZstd::Zstd -lssl -lcrypto -lz
+Cflags: -I${includedir}
+
