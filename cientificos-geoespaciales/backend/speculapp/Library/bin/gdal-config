@@ -1,0 +1,74 @@
+#!/bin/sh
+CONFIG_LIBS="-LIBPATH:N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib gdal"
+CONFIG_DEP_LIBS="N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/iconv.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/charset.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/libssl.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/libcrypto.lib crypt32 N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/liblzma.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/deflate.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/liblz4.lib wbemuuid N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/geotiff_i.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/tiff.lib ws2_32 N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/Lerc.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/zstd.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/jpeg.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/poppler.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/libpng.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/netcdf.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/hdf5_hl.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/zlib.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/zip.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/blosc.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/cfitsio.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/libcurl.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/libwebp.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/hdf.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/mfhdf.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/xdr.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/libkea.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/hdf5_cpp.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/hdf5.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/openjp2.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/tiledb.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/kmlbase.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/kmldom.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/kmlengine.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/minizip.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/uriparser.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/z.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/pcre2-8.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/spatialite_i.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/sqlite3.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/xerces-c_3.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/libpq.lib "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.26100.0/um/x64/odbccp32.lib" "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.26100.0/um/x64/WS2_32.Lib" legacy_stdio_definitions.lib odbccp32.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/freexl_i.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/libexpat.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/libxml2.lib N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/geos_c.lib psapi N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/proj.lib"
+CONFIG_PREFIX="N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library"
+CONFIG_CFLAGS="-IN:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/include"
+CONFIG_DATA="N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/share/gdal"
+CONFIG_VERSION="3.6.2"
+CONFIG_GNM_ENABLED=yes
+CONFIG_FORMATS="JPEG raw GTIFF MEM vrt Derived HFA SDTS NITF GXF AAIGrid CEOS SAR_CEOS XPM DTED JDEM Envisat ELAS FIT L1B RS2 ILWIS RMF Leveller SGI SRTMHGT IDRISI GSG ERS PALSARJaxa DIMAP GFF COSAR PDS ADRG COASP TSX Terragen BLX MSGN TIL R northwood SAGA XYZ ESRIC HF2 KMLSUPEROVERLAY CTG ZMap NGSGEOID IRIS MAP CALS SAFE SENTINEL2 PRF MRF WMTS GRIB BMP TGA STACTA OGCAPI BSB AIGrid ARG USGSDEM AirSAR OZI PCIDSK SIGDEM RIK STACIT PDF PNG GIF WCS HTTP netCDF Zarr DAAS EEDA FITS HDF5 PLMOSAIC WMS WEBP HDF4 Rasterlite MBTiles PostGISRaster KEA JP2OpenJPEG TileDB PCRaster MEM geojson TAB Shape KML VRT AVC GML CSV DGN GMT NTF S57 Tiger Geoconcept GeoRSS DXF PGDump GPSBabel EDIGEO SXF OpenFileGDB WAsP Selafin JML VDV FlatGeobuf MapML SDTS GPX GMLAS SVG CSW LIBKML NAS PLSCENES WFS NGW Elastic Idrisi PDS SQLite GeoPackage OSM VFK MVT AmigoCloud Carto ILI PG MSSQLSpatial ODBC PGeo XLSX XLS CAD ODS LVBAG"
+usage()
+
+{
+	cat <<EOF
+Usage: gdal-config [OPTIONS]
+Options:
+	[--prefix[=DIR]]
+	[--libs]
+	[--dep-libs]
+	[--cflags]
+	[--datadir]
+	[--version]
+	[--ogr-enabled]
+	[--gnm-enabled]
+	[--formats]
+EOF
+	exit $1
+}
+
+if test $# -eq 0; then
+	usage 1 1>&2
+fi
+
+case $1 in
+  --libs)
+    echo $CONFIG_LIBS
+    ;;
+
+  --dep-libs)
+    echo $CONFIG_DEP_LIBS
+    ;;
+
+  --cflags)
+    echo $CONFIG_CFLAGS
+    ;;
+
+  --datadir)
+    echo $CONFIG_DATA
+    ;;
+
+  --prefix)
+    echo $CONFIG_PREFIX
+    ;;
+
+  --version)
+    echo $CONFIG_VERSION
+    ;;
+
+  --ogr-enabled)
+    echo yes
+    ;;
+
+  --gnm-enabled)
+    echo $CONFIG_GNM_ENABLED
+    ;;
+
+  --formats)
+    echo $CONFIG_FORMATS
+    ;;
+
+  *)
+    usage 1 1>&2
+    ;;
+
+esac

@@ -1,0 +1,10 @@
+prefix=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library
+libdir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib
+includedir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/include
+
+Name: poppler
+Description: PDF rendering library
+Version: 22.12.0
+
+Libs: -L${libdir} -lpoppler
+Cflags: -I${includedir}/poppler

@@ -1,0 +1,14 @@
+prefix=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library
+exec_prefix=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library
+libdir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib
+sharedlibdir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib
+includedir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/include/minizip
+
+Name: minizip
+Description: Zip manipulation library
+Version: 4.0.3
+
+Requires.private: zlib
+Libs: -L${libdir} -L${sharedlibdir} -lminizip
+Libs.private: -lbzip2 -llzma -lzstd
+Cflags: -I${includedir}

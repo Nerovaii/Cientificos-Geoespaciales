@@ -1,0 +1,16 @@
+prefix=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+sysconfdir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/etc
+localstatedir=N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/var
+confdir=${sysconfdir}/fonts
+cachedir=${localstatedir}/cache/fontconfig
+
+Name: Fontconfig
+Description: Font configuration and customization library
+Version: 2.14.1
+Requires: freetype2 >=  21.0.15
+Libs: -L${libdir} -lfontconfig
+Libs.private: N:/Cientificos Geoespaciales/cientificos-geoespaciales/backend/speculapp/Library/lib/expat.lib
+Cflags: -I${includedir}
