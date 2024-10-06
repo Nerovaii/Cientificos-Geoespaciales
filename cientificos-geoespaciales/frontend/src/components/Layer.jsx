@@ -47,8 +47,10 @@ function LayerMenu({ visibleLayers, toggleLayer, addLayer }) {
 
     return (
         <div className={`layer-menu-container ${isVisible ? '' : 'hidden'}`} style={{ position: 'absolute', zIndex: 999 }}>
-            <button onClick={toggleMenuVisibility}>
-                {isVisible ? '<' : '>'}
+            <button class="setting-btn" onClick={toggleMenuVisibility}>
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar1"></span>
             </button>
             {isVisible && (
                 <div className="layer-menu">
@@ -67,10 +69,10 @@ function LayerMenu({ visibleLayers, toggleLayer, addLayer }) {
                             </li>
                         ))}
                     </ul>
-                    <div {...getRootProps({ className: 'dropzone' })}>
+                    {/*<div {...getRootProps({ className: 'dropzone' })}>
                         <input {...getInputProps()} />
                         <p>Arrastra o sube archivos haciendo click</p>
-                    </div>
+                    </div>*/}
                 </div>
             )}
         </div>
